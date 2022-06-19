@@ -1,0 +1,24 @@
+<section class="main-section">
+
+    <div class="table-section">
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Designation</th>
+                <th>Logo</th>
+            </tr>
+
+            <tr *ngFor="let data of listData; let i = index">
+                <td>{{i+1}}</td>
+                <td><a [routerLink]="['/detail', data.id]">{{data.name}}</a></td>
+                <td>{{data.company}}</td>
+                <td>{{data.designation}}</td>
+                <td><img src="{{data.company_logo}}" alt="Logo"></td>
+            </tr>
+        </table>
+
+    </div>
+</section>

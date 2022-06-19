@@ -1,0 +1,22 @@
+<section class="main-section">
+    <div class="login-div">
+        <h2 class="head">Sign In</h2>
+        <div class="email login">
+            <img src="/assets/user.png" alt="user id" height="20px">
+            <input type="email" (keyup)="email($event)" name="email" id="email" placeholder="User ID">
+        </div>
+
+        <div class="password login">
+            <img src="/assets/key.png" alt="password" height="20px">
+            <input type="password" (keyup)="pass($event)" name="password" id="password" placeholder="Password">
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" (click)="login()">
+            <label>Confirm Details</label>
+        </div>
+
+        <button *ngIf="isUser" routerLink="/home" (click)="output()">Login</button>
+        <button *ngIf="!isUser" (click)="output()">Login</button>
+    </div>
+</section>
